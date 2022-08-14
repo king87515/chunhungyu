@@ -20,23 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"king87515.github.io","root":"/chunhungyu/","images":"/chunhungyu/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/chunhungyu/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="chunhungyu">
-<meta property="og:url" content="https://king87515.github.io/chunhungyu/index.html">
+    <meta name="description" content="categories: website網頁設計tags: web https Certbot cerbot vedio https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;snXIDRrZMpM   certbot blog https:&#x2F;&#x2F;blog.miniasp.com&#x2F;post&#x2F;2021&#x2F;02&#x2F;11&#x2F;Create-SSL-TLS-certificates-from-LetsEnc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTPS Certbot 申請憑證">
+<meta property="og:url" content="https://king87515.github.io/chunhungyu/2022/08/10/HTTPS%20Certbot%20%E7%94%B3%E8%AB%8B%E6%86%91%E8%AD%89/index.html">
 <meta property="og:site_name" content="chunhungyu">
+<meta property="og:description" content="categories: website網頁設計tags: web https Certbot cerbot vedio https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;snXIDRrZMpM   certbot blog https:&#x2F;&#x2F;blog.miniasp.com&#x2F;post&#x2F;2021&#x2F;02&#x2F;11&#x2F;Create-SSL-TLS-certificates-from-LetsEnc">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-08-10T04:57:21.740Z">
+<meta property="article:modified_time" content="2022-08-14T07:46:25.026Z">
 <meta property="article:author" content="游俊弘">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="https">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://king87515.github.io/chunhungyu/">
+<link rel="canonical" href="https://king87515.github.io/chunhungyu/2022/08/10/HTTPS%20Certbot%20%E7%94%B3%E8%AB%8B%E6%86%91%E8%AD%89/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-tw","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-tw","comments":true,"permalink":"https://king87515.github.io/chunhungyu/2022/08/10/HTTPS%20Certbot%20%E7%94%B3%E8%AB%8B%E6%86%91%E8%AD%89/","path":"2022/08/10/HTTPS Certbot 申請憑證/","title":"HTTPS Certbot 申請憑證"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>chunhungyu</title>
+<title>HTTPS Certbot 申請憑證 | chunhungyu</title>
   
 
 
@@ -63,7 +69,7 @@
 
     <a href="/chunhungyu/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">chunhungyu</h1>
+      <p class="site-title">chunhungyu</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">computer science</p>
@@ -92,7 +98,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -105,6 +111,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Certbot"><span class="nav-number">1.</span> <span class="nav-text">Certbot</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B3%E8%AB%8B%E9%A0%BB%E7%8E%87%E9%99%90%E5%88%B6%E8%AA%AA%E6%98%8E"><span class="nav-number">1.1.</span> <span class="nav-text">申請頻率限制說明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Update"><span class="nav-number">1.2.</span> <span class="nav-text">Update</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -154,97 +161,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://king87515.github.io/chunhungyu/2022/08/10/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/chunhungyu/images/avatar.gif">
-      <meta itemprop="name" content="游俊弘">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chunhungyu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | chunhungyu">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/chunhungyu/2022/08/10/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-08-10 20:43:43" itemprop="dateCreated datePublished" datetime="2022-08-10T20:43:43+08:00">2022-08-10</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-tw">
     <link itemprop="mainEntityOfPage" href="https://king87515.github.io/chunhungyu/2022/08/10/HTTPS%20Certbot%20%E7%94%B3%E8%AB%8B%E6%86%91%E8%AD%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -258,13 +185,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | chunhungyu">
+      <meta itemprop="name" content="HTTPS Certbot 申請憑證 | chunhungyu">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/chunhungyu/2022/08/10/HTTPS%20Certbot%20%E7%94%B3%E8%AB%8B%E6%86%91%E8%AD%89/" class="post-title-link" itemprop="url">HTTPS Certbot 申請憑證</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          HTTPS Certbot 申請憑證
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -303,7 +230,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>categories: <code>website網頁設計</code><br>tags: <code>web</code> <code>https</code></p>
+        <p>categories: <code>website網頁設計</code><br>tags: <code>web</code> <code>https</code></p>
 <h1 id="Certbot"><a href="#Certbot" class="headerlink" title="Certbot"></a>Certbot</h1><ul>
 <li>cerbot vedio<ul>
 <li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=snXIDRrZMpM">https://www.youtube.com/watch?v=snXIDRrZMpM</a></li>
@@ -327,16 +254,39 @@
 </li>
 </ul>
 <ul>
-<li>申請流程
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/chunhungyu/2022/08/10/HTTPS%20Certbot%20%E7%94%B3%E8%AB%8B%E6%86%91%E8%AD%89/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+<li>申請流程<span id="more"></span>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create acount</span></span><br><span class="line">certbot certonly <span class="literal">--manual</span> <span class="literal">-m</span> [<span class="type">mail</span>] <span class="literal">-d</span> [<span class="type">domain</span> <span class="type">name</span>]</span><br><span class="line"><span class="comment"># 申請 Let&#x27;s Encrypt 免費憑證，通過驗證項目才能「證明」你真的擁有該域名！</span></span><br><span class="line">certbot certonly <span class="literal">--manual</span> <span class="literal">--preferred-challenges</span> http <span class="literal">-m</span> ntouigl@gmail.com <span class="literal">-d</span> igl.cse.ntou.edu.tw</span><br><span class="line"><span class="comment"># 刪除憑證</span></span><br><span class="line">certbot delete <span class="literal">--cert-name</span> igl.cse.ntou.edu.tw</span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 顯示目前 certbot 管理的憑證</span></span><br><span class="line">certbot certificates</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Xampp hHttpd-ssl.conf</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SSLCertificateFile &quot;C:/Certbot/live/[domain name]/cert.pem&quot;</span><br><span class="line">SSLCertificateKeyFile &quot;C:/Certbot/live/[domain name]/privkey.pem&quot;</span><br><span class="line">SSLCertificateChainFile &quot;C:/Certbot/live/[domain name]/chain.pem&quot;</span><br><span class="line">SSLCACertificateFile &quot;C:/Certbot/live/[domain name]/fullchain.pem&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Xampp httpd.conf</p>
+<ul>
+<li>建議將<code>#NameVirtualHost *:443</code>寫在this block之下方，新版的xampp應該可以直接放在檔案最下方  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DocumentRoot &quot;$&#123;LSSROOT&#125;/public&quot;</span><br><span class="line">&lt;Directory &quot;$&#123;LSSROOT&#125;/public&quot;&gt;</span><br><span class="line">    #省略</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#NameVirtualHost *:443</span><br><span class="line">&lt;VirtualHost *:443&gt;</span><br><span class="line">ServerName [domainName]</span><br><span class="line">DocumentRoot &quot;[rootPath]&quot;</span><br><span class="line">SSLEngine on</span><br><span class="line">SSLCertificateFile &quot;C:/Certbot/live/[domain name]/cert.pem&quot;</span><br><span class="line">SSLCertificateKeyFile &quot;C:/Certbot/live/[domain name]/privkey.pem&quot;</span><br><span class="line">SSLCertificateChainFile &quot;C:/Certbot/live/[domain name]/chain.pem&quot;</span><br><span class="line">SSLCACertificateFile &quot;C:/Certbot/live/[domain name]/fullchain.pem&quot;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ps: <code>DocumentRoot</code><ul>
+<li>Lab web : <code>&quot;$&#123;LSSROOT&#125;/public&quot;</code></li>
+<li>cgw : <code>&quot;C:/xampp/htdocs/dashboard/CGW2021&quot;</code></li>
+<li>heping : <code>&quot;C:/xampp/htdocs&quot;</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="申請頻率限制說明"><a href="#申請頻率限制說明" class="headerlink" title="申請頻率限制說明"></a>申請頻率限制說明</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://letsencrypt.org/zh-tw/docs/rate-limits/">https://letsencrypt.org/zh-tw/docs/rate-limits/</a></li>
+<li>取得你的註冊網域所申請過的憑證列表 <a target="_blank" rel="noopener" href="https://crt.sh/">https://crt.sh/</a></li>
+</ul>
+<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#執行前先關閉專案</span></span><br><span class="line">certbot certonly <span class="literal">--standalone</span> <span class="literal">--renew-by-default</span> <span class="literal">-d</span> [<span class="type">domain_name</span>]</span><br></pre></td></tr></table></figure>
+<!-- 
+certbot certonly --standalone --renew-by-default -d cgw2021.cse.ntou.edu.tw
+certbot certonly --standalone --renew-by-default -d igl.cse.ntou.edu.tw 
+-->
     </div>
 
     
@@ -344,11 +294,26 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/chunhungyu/tags/web/" rel="tag"># web</a>
+              <a href="/chunhungyu/tags/https/" rel="tag"># https</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/chunhungyu/2022/08/10/hello-world/" rel="next" title="Hello World">
+                  Hello World <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
+
 
 
 
