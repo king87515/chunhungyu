@@ -295,3 +295,39 @@ Hexo 有三種預設佈局：post、page 和 draft，它們分別對應不同的
   
 #### Git
 * [../.DS_Store](https://blog.csdn.net/qq_32907195/article/details/114941510)
+
+#### Mermaid
+1. `npm install hexo-filter-mermaid-diagrams`
+2. 在 `{repo_folder}/themes/next/layout/_partials/footer.njk` (我的主題是 next)
+  - 可以值機在最底部加上以下內容 (根據不同 footer檔案格式可能有些微不同)
+  ```njk
+  {% if theme.mermaid.enable %}
+    <script src='https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js'></script>
+    <script>
+      {% if window.mermaid %}
+        mermaid.initialize({{ theme.mermaid.options | json }});
+      {% endif %}
+    </script>
+  {% endif %}
+  ```
+3. 在 `{repo_folder}/themes/next/_config.yml`
+   - 於 `Mermaid tag` 中修改成以下內容
+  ```yaml
+  # Mermaid tag
+  mermaid:
+    enable: true
+    version: "latest" # default v7.1.2
+    # Available themes: default | dark | forest | neutral
+    theme:
+      light: default
+      dark: dark
+  ```
+4. 這樣應該就可以了！
+
+#### Gitalk 評論
+1. `{repo_folder}/themes/next/_config.yml` 中的repo名稱，網路上的教學多半都適用 `{user_name}.github.io`
+   - 因為我設置的 repo 為 `chunhungyu`，所以填寫 `chunhungyu` 即可  
+2. 未找到相關的 Issues 進行評論，請聯繫xxx初始化創建
+   - [解決辦法](https://www.toimc.com/hexo-usage-3/)
+3. hexo gitalk 報錯 redirect_uri_mismatch
+   - [解決辦法](https://blog.jijian.link/2020-01-17/hexo-gitalk-redirect_uri_mismatch/)

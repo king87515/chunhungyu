@@ -7,7 +7,7 @@ title: chunhungyu
 subtitle: 'computer science'
 description: ''
 keywords:
-author: 游俊弘
+author: 游俊弘 (Jason Yu)
 language: zh-tw
 timezone: Asia/Taipei
 
@@ -109,3 +109,10 @@ deploy:
   type: git #add 20220811
   repository: https://github.com/king87515/chunhungyu.git #https://github.com/<user_name>/<repo_name>.git
   branch: main
+
+sitemap:
+  path: sitemap.xml
+  template: ./sitemap_template.xml
+  rel: false
+  tag: true
+  category: false
